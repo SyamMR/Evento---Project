@@ -1,0 +1,45 @@
+<main>
+
+<section>
+    <div class="container pt-5 mt-5 " style="position: relative;">
+      <div class="row p-3">
+        <h3>All Venues</h3>
+        <a href="/admin/add-venue" class="btn btn-success ml-auto">Add Venue</a>
+      </div>
+        <table class="table" id="productsTable">
+  <thead>
+    <tr>
+      
+      <th scope="col">Name</th>
+      <th scope="col">Location</th>
+      <th scope="col">Capacity</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Image</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each venues}}
+    <tr>
+      <td>{{this.Name}}</td>
+      <td>{{this.Location}}</td>
+      <td>{{this.Capacity}}</td>
+      <td>{{this.Amount}}</td>
+      <td><img style="width: 50px;height: 50px;" src="/venue-images/{{this._id}}.jpg"></td>
+    <td>
+        <a href="/admin/edit-venue/{{this._id}}" class="btn btn-primary">Edit</a>
+        <a href="/admin/delete-venue/{{this._id}}" class="btn btn-danger"
+         onclick="return confirm('Are you want to delect {{this.Name}}?')">Delete</a>
+        </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+    </div>
+</section>
+</main>
+<script>
+  $(function () {
+    $('#productsTable').DataTable();
+} );
+</script>
