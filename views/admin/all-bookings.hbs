@@ -1,33 +1,33 @@
 <section>
-    <div class="container p-1 pt-5 mt-5">
-      <div>
-        <h3 class="pt-3 pb-3">All Bookings</h3>
-      </div>
-        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">User Name</th>
-      <th scope="col">Event Date</th>
-      <th scope="col">Venue</th>
-      <th scope="col">Payment</th>
-      <th scope="col">Options</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each bookings}}
-    <tr>
-      <td>{{this.name}}</td>
-      <td>{{this.date}}</td>
-      <td>{{this.venue}}</td>
-      <td>{{this.amount}}</td>
-        <td>
-        <a href="#" class="btn btn-primary">View</a>
-        <a href="/admin/cancel-booking/{{this._id}}" class="btn btn-danger"
-         onclick="return confirm('Are you want to cancel {{this.Name}}?')">Cancel</a>
-        </td>
-    </tr>
-    {{/each}}
-  </tbody>
-</table>
+  <div class="container p-1 pt-5 mt-5">
+    <div>
+      <h3 class="pt-3 pb-3">All Bookings</h3>
     </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">User Name</th>
+          <th scope="col">Event Date</th>
+          <th scope="col">Venue</th>
+          <th scope="col">Payment</th>
+          <th scope="col">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each bookings}}
+        <tr>
+          <td>{{this.name}}</td>
+          <td>{{this.date}}</td>
+          <td>{{this.venue}}</td>
+          <td>{{this.amount}}</td>
+          <td>
+            <a href="#" class="btn btn-primary">View</a>
+            <a href="/admin/cancel-booking/{{this._id}}" class="btn btn-danger"
+              onclick="return confirm('Are you want to cancel {{this.Name}}?')">Cancel</a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
 </section>

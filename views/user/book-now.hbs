@@ -3,223 +3,222 @@
         <div class="row d-flex">
             <div class="col-lg-6">
                 <div class="card1 pb-5">
-              
-                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line mt-5 pt-5"> <img src="traveler.png" class="image"> </div>
+
+                    <div class="row px-3 justify-content-center mt-4  border-line mt-5 pt-5 pr-5 mr-5"> <img
+                            src="traveler.png" class="image"> </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="card2 card border-0 px-4 py-5">
-                
-                 <h2 class="" style="text-align: center;">Book Now</h2>
-                  <form action="/book-now" method="POST">
-            {{#if loginErr}}
-            <p class="error">{{loginErr}}</p>
-            {{/if}}
-                                <div class="row px-3 pt-4"> <label class="mb-1">
-                            <h6 class="mb-0 text-sm">Name</h6>
-                        </label> <input class="mb-4" type="text" name="name" placeholder="Enter your name"> </div>
-                    <div class="row px-3"> <label class="mb-1">
-                            <h6 class="mb-0 text-sm">Email Address</h6>
-                        </label> <input class="mb-4" type="email" name="email" placeholder="Enter a valid email address"> </div>
-                    <div class="row px-3"> <label class="mb-1">
-                            <h6 class="mb-0 text-sm">Phone</h6>
-                        </label> <input type="tel" name="tel" placeholder="Enter your phone No"> </div>
+
+                    <h2 class="" style="text-align: center;">Book Now</h2>
+                    <form action="/book-now" method="POST">
+                        {{#if loginErr}}
+                        <p class="error">{{loginErr}}</p>
+                        {{/if}}
+                        <div class="row px-3 pt-4"> <label class="mb-1">
+                                <h6 class="mb-0 text-sm">Name</h6>
+                            </label> <input class="mb-4" type="text" name="name" placeholder="Enter your name"> </div>
                         <div class="row px-3"> <label class="mb-1">
-                            <h6 class="mb-0 text-sm pt-3">Venue</h6>
-                        </label> 
-                           <select class="form-control" name="venue">
-                             <option>Select</option>
-											<option>SS Convention Center</option>
-											<option>RDR Convention Center</option>
-											<option>HD Convention Center</option>
-                      <option>VV Convention Center</option>
-                      <option>SDN Convention Center</option>
-                      <option>MV Convention Center</option>
-										</select> </div>
-                    <div class="row px-3"> <label class="mb-1">
-                            <h6 class="mb-0 text-sm pt-3"> Event Date</h6>
-                        </label> <input type="date" name="date"> </div>
+                                <h6 class="mb-0 text-sm">Email Address</h6>
+                            </label> <input class="mb-4" type="email" name="email"
+                                placeholder="Enter a valid email address"> </div>
                         <div class="row px-3"> <label class="mb-1">
-                            <h6 class="mb-0 text-sm pt-3">Purpose</h6>
-                        </label>
-                        <select class="form-control" placeholder="Enter your phone No">
-                          <option>Select</option>
-											<option>Marraige</option>
-											<option>Engagement</option>
-											<option>Event</option>
-                      <option>Other</option>
-										</select>
-                    </div> 
+                                <h6 class="mb-0 text-sm">Phone</h6>
+                            </label> <input type="tel" name="tel" placeholder="Enter your phone No"> </div>
                         <div class="row px-3"> <label class="mb-1">
-                            <h6 class="mb-0 text-sm pt-3">Type</h6>
-                        </label> 
-                        <select class="form-control">
-											<option>Select</option>
-											<option>Full Day</option>
-											<option>Half Day</option>
-										</select> </div>
+                                <h6 class="mb-0 text-sm pt-3">Venue</h6>
+                            </label>
+                            <select class="form-control" name="venue">
+                                <option>Select</option>
+                                <option>SS Convention Center</option>
+                                <option>RDR Convention Center</option>
+                                <option>HD Convention Center</option>
+                                <option>VV Convention Center</option>
+                                <option>SDN Convention Center</option>
+                                <option>MV Convention Center</option>
+                            </select>
+                        </div>
                         <div class="row px-3"> <label class="mb-1">
-                            <h6 class="mb-0 text-sm pt-3">Advance Amount</h6>
-                        </label> <input type="text" name="amount" placeholder=""> </div>
-                    <div class="row mb-3 px-3 pt-3 float-right"> <button type="submit" class="btn btn-blue text-center">Submit</button> </div>
-  
+                                <h6 class="mb-0 text-sm pt-3"> Event Date</h6>
+                            </label> <input type="date" name="date"> </div>
+                        <div class="row px-3"> <label class="mb-1">
+                                <h6 class="mb-0 text-sm pt-3">Purpose</h6>
+                            </label>
+                            <select class="form-control" placeholder="Enter your phone No">
+                                <option>Select</option>
+                                <option>Marraige</option>
+                                <option>Engagement</option>
+                                <option>Event</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="row px-3"> <label class="mb-1">
+                                <h6 class="mb-0 text-sm pt-3">Type</h6>
+                            </label>
+                            <select class="form-control">
+                                <option>Select</option>
+                                <option>Full Day</option>
+                                <option>Half Day</option>
+                            </select>
+                        </div>
+                        <div class="row px-3"> <label class="mb-1">
+                                <h6 class="mb-0 text-sm pt-3">Advance Amount</h6>
+                            </label> <input type="text" name="amount" placeholder=""> </div>
+                        <div class="row mb-3 px-3 pt-3 float-right"> <button type="submit"
+                                class="btn btn-blue text-center">Submit</button> </div>
+
                     </form>
                 </div>
             </div>
         </div>
-       
+
     </div>
 </div>
 
 
 
 <style>
+    .card2 {
+        margin: 0px 40px
+    }
 
-
-
-
-.card2 {
-    margin: 0px 40px
-    
-}
-
-.logo {
-    width: 200px;
-    height: 100px;
-    margin-top: 20px;
-    margin-left: 35px
-}
-
-.image {
-    width: 460px;
-    height: 700px
-}
-
-.border-line {
-    border-right: 1px solid #EEEEEE
-    
-}
-
-
-
-
-
-
-
-.line {
-    height: 1px;
-    width: 45%;
-    background-color: #E0E0E0;
-    margin-top: 10px
-}
-
-.or {
-    width: 10%;
-    font-weight: bold
-}
-
-.text-sm {
-    font-size: 14px !important
-}
-
-::placeholder {
-    color: #BDBDBD;
-    opacity: 1;
-    font-weight: 300
-}
-
-:-ms-input-placeholder {
-    color: #BDBDBD;
-    font-weight: 300
-}
-
-::-ms-input-placeholder {
-    color: #BDBDBD;
-    font-weight: 300
-}
-
-input,
-textarea {
-    padding: 10px 12px 10px 12px;
-    border: 1px solid lightgrey;
-    border-radius: 2px;
-    margin-bottom: 5px;
-    margin-top: 2px;
-    width: 100%;
-    box-sizing: border-box;
-    color: #2C3E50;
-    font-size: 14px;
-    letter-spacing: 1px
-}
-.form-control{
-     padding: 10px 12px 10px 12px;
-    border: 1px solid lightgrey;
-    border-radius: 2px;
-    margin-bottom: 5px;
-    margin-top: 2px;
-    width: 100%;
-    box-sizing: border-box;
-    color: #2C3E50;
-    font-size: 14px;
-    letter-spacing: 1px
-    
-}
-
-input:focus,
-textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border: 1px solid #304FFE;
-    outline-width: 0
-}
-
-button:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    outline-width: 0
-}
-
-a {
-    color: inherit;
-    cursor: pointer
-}
-
-.btn-blue {
-    background-color: #1A237E;
-    width: 150px;
-    color: #fff;
-    border-radius: 2px
-}
-
-.btn-blue:hover {
-    background-color: #000;
-    cursor: pointer
-}
-
-.bg-blue {
-    color: #fff;
-    background-color: #1A237E
-}
-
-@media screen and (max-width: 991px) {
     .logo {
-        margin-left: 0px
+        width: 200px;
+        height: 100px;
+        margin-top: 20px;
+        margin-left: 35px
     }
 
     .image {
-        width: 300px;
-        height: 220px
+        width: 460px;
+        height: 700px
     }
 
     .border-line {
-        border-right: none
+        border-right: 1px solid #EEEEEE
     }
 
-    .card2 {
-        border-top: 1px solid #EEEEEE !important;
-        margin: 0px 15px
+
+
+
+
+
+
+    .line {
+        height: 1px;
+        width: 45%;
+        background-color: #E0E0E0;
+        margin-top: 10px
     }
-}
+
+    .or {
+        width: 10%;
+        font-weight: bold
+    }
+
+    .text-sm {
+        font-size: 14px !important
+    }
+
+    ::placeholder {
+        color: #BDBDBD;
+        opacity: 1;
+        font-weight: 300
+    }
+
+    :-ms-input-placeholder {
+        color: #BDBDBD;
+        font-weight: 300
+    }
+
+    ::-ms-input-placeholder {
+        color: #BDBDBD;
+        font-weight: 300
+    }
+
+    input,
+    textarea {
+        padding: 10px 12px 10px 12px;
+        border: 1px solid lightgrey;
+        border-radius: 2px;
+        margin-bottom: 5px;
+        margin-top: 2px;
+        width: 100%;
+        box-sizing: border-box;
+        color: #2C3E50;
+        font-size: 14px;
+        letter-spacing: 1px
+    }
+
+    .form-control {
+        padding: 10px 12px 10px 12px;
+        border: 1px solid lightgrey;
+        border-radius: 2px;
+        margin-bottom: 5px;
+        margin-top: 2px;
+        width: 100%;
+        box-sizing: border-box;
+        color: #2C3E50;
+        font-size: 14px;
+        letter-spacing: 1px
+    }
+
+    input:focus,
+    textarea:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        border: 1px solid #304FFE;
+        outline-width: 0
+    }
+
+    button:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        outline-width: 0
+    }
+
+    a {
+        color: inherit;
+        cursor: pointer
+    }
+
+    .btn-blue {
+        background-color: #1A237E;
+        width: 150px;
+        color: #fff;
+        border-radius: 2px
+    }
+
+    .btn-blue:hover {
+        background-color: #000;
+        cursor: pointer
+    }
+
+    .bg-blue {
+        color: #fff;
+        background-color: #1A237E
+    }
+
+    @media screen and (max-width: 991px) {
+        .logo {
+            margin-left: 0px
+        }
+
+        .image {
+            width: 300px;
+            height: 220px
+        }
+
+        .border-line {
+            border-right: none
+        }
+
+        .card2 {
+            border-top: 1px solid #EEEEEE !important;
+            margin: 0px 15px
+        }
+    }
 </style>

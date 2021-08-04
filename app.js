@@ -5,19 +5,19 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 
-var hbs=require('express-handlebars')
+var hbs = require('express-handlebars')
 var userRouter = require('./routes/user');
 var adminRouter = require('./routes/admin');
 var venderRouter = require('./routes/vender');
 var app = express();
-var fileUpload=require('express-fileUpload')
-var db=require('./config/connection')
-var session=require('express-session')
+var fileUpload = require('express-fileUpload')
+var db = require('./config/connection')
+var session = require('express-session')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-app.engine('hbs',hbs({extname:'hbs',defaultLayout:'layout',layoutsDir:__dirname+'/views/layout/',partialsDir:__dirname+'/views/partials/'}))
+app.engine('hbs', hbs({ extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layout/', partialsDir: __dirname + '/views/partials/' }))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -32,11 +32,11 @@ app.use(
     saveUninitialized: true,
   })
 );
-db.connect((err)=>{
-  if(err)
-  console.log("Connection Error"+err);
+db.connect((err) => {
+  if (err)
+    console.log("Connection Error" + err);
   else
-  console.log("Database Connected");
+    console.log("Database Connected");
 })
 
 app.use('/', userRouter);
@@ -44,12 +44,12 @@ app.use('/admin', adminRouter);
 app.use('/vender', venderRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
